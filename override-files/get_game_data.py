@@ -76,7 +76,7 @@ def run_command(command, path):
     cwd = os.getcwd()
     os.chdir(path)
 
-    result = run(command, stdout=PIPE, stdin=PIPE, universal_newlines=True)
+    result = run(command, stdout=PIPE, stdin=PIPE, universal_newlines=True, shell=True)
     print("compile result", result)
 
     os.chdir(cwd)
